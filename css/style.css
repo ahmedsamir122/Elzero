@@ -1224,6 +1224,9 @@ transform: translateY(40%);
     animation-duration: 2s;
     animation-timing-function: ease;
 }
+.percent-back span.hidden{
+    display: none;
+}
 @keyframes static {
     0% {
         width: 0;
