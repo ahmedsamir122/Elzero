@@ -37,6 +37,13 @@ html {
     max-height: 100vh;
     position: relative;
 }
+section{
+    transition: 0.7S ease;
+}
+section.hidden{
+    opacity: 0;
+    transform: translateY(10em);
+}
 header {
     width: 85%;
     display: flex;
@@ -879,6 +886,11 @@ transform: translateY(40%);
     padding: 1em 0.5em;
     border-radius: 5px;
     position: relative;
+    opacity: 0;
+    transition: 5s ease;
+}
+.test-card.active{
+    opacity: 1;
 }
 @media(max-width:767px){
     .test-card{
@@ -1218,22 +1230,11 @@ transform: translateY(40%);
     display: block;
     height: 100%;
     background-color: var(--main-color);
-    animation-name: static;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    width: 0;
+    transition: 2s ease;
 }
-.percent-back span.hidden{
-    display: none;
-}
-@keyframes static {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
+.percent-back span.active{
+    width: 100%;
 }
 
 /* ---------- end of our skills-------- */
